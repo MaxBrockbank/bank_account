@@ -16,7 +16,7 @@ Bank.prototype.addAccount = function(account){
 //Account Business Logic
 function Account(name, address, deposit){
   this.name = name;
-  this.addres = address;
+  this.address = address;
   this.deposit = deposit;
 };
 
@@ -25,6 +25,20 @@ function Account(name, address, deposit){
 
 
 //ALL UI Logic
+function showAccountInfo(accountsToDisplay) {
+  let accountInfo = $("div#showAccount");
+  let htmlForNewAccount = "";
+  accountsToDisplay.forEach(function(account) {
+    htmlForNewAccount += "<p> Name: " + account.name +"</p> <p> Address: " + account.address +"</p> <p> Deposit: " + account.deposit +"</p>"
+    
+  });
+  accountInfo.html(htmlForNewAccount);
+  accountInfo.show();
+  //$("#show").show();
+  //$("#name").html(account.name);
+  //$("#address").html(account.address);
+  //$("deposit").html(account.deposit);
+};
 
 $(document).ready(function(){
   let firstBank = new Bank();
@@ -37,8 +51,7 @@ $(document).ready(function(){
 
     let newAccount = new Account(name, address, deposit);
     firstBank.addAccount(newAccount);
+    showAccountInfo(firstBank.accounts);
     console.log(firstBank);
-  })
-
-
-})
+  });
+});

@@ -20,7 +20,8 @@ Bank account application that allows you to start new accounts and see the accou
 * JavaScript/jQuery
 
 ## Known Bugs
-* 
+* Transactions with mulitple accounts will add or subract from all accounts
+* After a transactions event listeners stop responding
 
 ## Specs
 ### Describe: bankAccount()

@@ -2,5 +2,36 @@
   width: 100%;
 }
 #showAccount{
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+#accountShow {
   display: none;
+  font-size: 15px;
+  margin-top: 20px;
+}
+
+#transactions{
+  display: none;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+button.trans{
+  width:49.5%;
+  display: inline;
+}
+
+.account{
+  padding: 30px;
+  background-color: antiquewhite;
+  border-radius: 10px;
+  margin: 10px 0px;
+}
+
+.newTransaction{
+  width: 100%;
 }

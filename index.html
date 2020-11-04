@@ -14,26 +14,39 @@
     <h1>Bank Account Application</h1>
     <div class="container" id="form-div">
       <form id="new-account">
-        <div class="form-group">
-          <label for="name">Name:</label>
-          <input type="text" class="form-control" id="name" placeholder="John Smith">
+        <div class ="column" >
+          <div class="form-group">
+            <label for="name">Account Name:</label>
+            <input type="text" class="form-control" id="name" placeholder="Ex. John's Checking">
+          </div>
+          <div class="form-group">
+            <label for="address">Address:</label>
+            <input type="text" class="form-control" id="address" placeholder="Ex. 1234 SW 56th Ave">
+          </div>
+          <div class="form-group">
+            <label for="amount">Initial Deposit:</label>
+            <input type="number" class="form-control" id="amount" placeholder="Ex. $100,000,000">
+          <button class="btn btn-dark" id="submit" type="submit">Make My New Account</button>
         </div>
-        <div class="form-group">
-          <label for="address">Address:</label>
-          <input type="text" class="form-control" id="address" placeholder="1234 SW 56th Ave">
-        </div>
-        <div class="form-group">
-          <label for="deposit">Initial Deposit:</label>
-          <input type="number" class="form-control" id="deposit" placeholder="$100,000,000">
-        </div>
-        <button class="btn btn-dark" id="submit" type="submit">Make My New Account</button>
+      </div>
       </form>
+
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6" id="accountShow">
+          <h2>Account Summary:</h2>
           <div id="showAccount">
-            <p>Name:<span class="name"></span></p>
-            <p>Address:<span class="address"></span></p>
-            <p>Initial Deposit:<span class="desposit"></span></p>
+          </div>
+        </div>
+        <div class="col-md-6" id="transactions">
+          <h1 id="current-account"></h1>
+            <div class="form-group">
+              <label for="transactionAmount">Amount:</label>
+              <input type="number" class="form-control" id="transactionAmount" placeholder=$100,000,000>
+            </div>
+            <button class="btn btn-success trans" id="deposit" type="button">Deposit</button>
+            <button class="btn btn-danger trans" id="withdraw" type="button">Withdraw</button>
+          <div class="col-md-6" id="accountBalance">
+          </div>
           </div>
         </div>
       </div>
